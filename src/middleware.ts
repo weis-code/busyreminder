@@ -88,10 +88,11 @@ export async function middleware(request: NextRequest) {
 
   // Admin: kun tilladt for ADMIN_EMAIL
   if (isAdmin) {
-    const adminEmail = process.env.ADMIN_EMAIL;
-    if (!user || user.email !== adminEmail) {
+    const adminEmail = process.env.ADMIN_EMAIL?.trim().toLowerCase();
+    const userEmail = user?.email?.trim().toLowerCase();
+    if (!user || userEmail !== adminEmail) {
       const url = request.nextUrl.clone();
-      url.pathname = "/";
+      url.pathname = localePrefix ? `/${localePrefix}/` : "/";
       return NextResponse.redirect(url);
     }
   }
