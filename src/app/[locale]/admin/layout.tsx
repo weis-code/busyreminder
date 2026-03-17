@@ -1,8 +1,9 @@
+import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
-import { createClient } from "@/lib/supabase/server";
 import Link from "next/link";
 import Image from "next/image";
-import { LayoutDashboard, Users, LogOut, Shield } from "lucide-react";
+import { LayoutDashboard, Users, Shield } from "lucide-react";
+import AdminLogout from "@/components/admin/AdminLogout";
 
 export default async function AdminLayout({
   children,
@@ -12,17 +13,18 @@ export default async function AdminLayout({
   params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
-  const supabase = await createClient();
-  const { data: { user } } = await supabase.auth.getUser();
+  const cookieStore = await cookies();
+  const adminSession = cookieStore.get("admin_session")?.value;
+  const validSession = process.env.ADMIN_PASSWORD;
+
+  if (!adminSession || adminSession !== validSession) {
+    redirect("/admin/login");
+  }
 
   const prefix = locale === "en" ? "" : `/${locale}`;
 
-  if (!user || user.email !== process.env.ADMIN_EMAIL) {
-    redirect(`${prefix}/`);
-  }
-
   const navItems = [
-    { href: `${prefix}/admin`, label: "Overview", icon: LayoutDashboard, exact: true },
+    { href: `${prefix}/admin`, label: "Overview", icon: LayoutDashboard },
     { href: `${prefix}/admin/users`, label: "Users", icon: Users },
   ];
 
@@ -60,16 +62,7 @@ export default async function AdminLayout({
         </nav>
 
         <div className="p-3 border-t border-gray-800">
-          <div className="px-3 py-2 mb-1">
-            <p className="text-xs text-gray-500 truncate">{user.email}</p>
-          </div>
-          <Link
-            href={`${prefix}/dashboard`}
-            className="flex items-center gap-3 px-3 py-2 rounded-lg text-sm text-gray-400 hover:text-white hover:bg-gray-800 transition-all"
-          >
-            <LogOut className="w-4 h-4" />
-            Back to Dashboard
-          </Link>
+          <AdminLogout />
         </div>
       </div>
 

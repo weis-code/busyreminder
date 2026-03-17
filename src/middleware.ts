@@ -6,6 +6,7 @@ import { routing } from "./i18n/routing";
 const intlMiddleware = createIntlMiddleware(routing);
 
 const locales = ["en", "da", "sv", "no"];
+const ADMIN_COOKIE = "admin_session";
 
 function getStrippedPath(pathname: string): string {
   for (const locale of locales) {
@@ -32,6 +33,23 @@ export async function middleware(request: NextRequest) {
 
   // Run intl middleware
   const intlResponse = intlMiddleware(request);
+
+  const strippedPath = getStrippedPath(pathname);
+  const localePrefix = getLocalePrefix(pathname);
+
+  // Admin: cookie-baseret adgang (uafhængig af Supabase)
+  const isAdminLogin = strippedPath === "/admin/login";
+  const isAdmin = strippedPath.startsWith("/admin") && !isAdminLogin;
+
+  if (isAdmin) {
+    const adminSession = request.cookies.get(ADMIN_COOKIE)?.value;
+    const validSession = process.env.ADMIN_PASSWORD;
+    if (!adminSession || adminSession !== validSession) {
+      const url = request.nextUrl.clone();
+      url.pathname = "/admin/login";
+      return NextResponse.redirect(url);
+    }
+  }
 
   const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
   if (!supabaseUrl || supabaseUrl === "your_supabase_url") {
@@ -64,15 +82,11 @@ export async function middleware(request: NextRequest) {
 
   const { data: { user } } = await supabase.auth.getUser();
 
-  const strippedPath = getStrippedPath(pathname);
-  const localePrefix = getLocalePrefix(pathname);
-
   const isAuthPage =
     strippedPath.startsWith("/auth/login") ||
     strippedPath.startsWith("/auth/signup");
 
   const isDashboard = strippedPath.startsWith("/dashboard");
-  const isAdmin = strippedPath.startsWith("/admin");
 
   if (isDashboard && !user) {
     const url = request.nextUrl.clone();
@@ -84,17 +98,6 @@ export async function middleware(request: NextRequest) {
     const url = request.nextUrl.clone();
     url.pathname = localePrefix ? `/${localePrefix}/dashboard` : "/dashboard";
     return NextResponse.redirect(url);
-  }
-
-  // Admin: kun tilladt for ADMIN_EMAIL
-  if (isAdmin) {
-    const adminEmail = process.env.ADMIN_EMAIL?.trim().toLowerCase();
-    const userEmail = user?.email?.trim().toLowerCase();
-    if (!user || userEmail !== adminEmail) {
-      const url = request.nextUrl.clone();
-      url.pathname = localePrefix ? `/${localePrefix}/` : "/";
-      return NextResponse.redirect(url);
-    }
   }
 
   // Merge supabase cookies into intl response

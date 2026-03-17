@@ -1,6 +1,4 @@
 import { createAdminClient } from "@/lib/supabase/admin";
-import { createClient } from "@/lib/supabase/server";
-import { redirect } from "next/navigation";
 import Link from "next/link";
 import {
   Users,
@@ -17,13 +15,7 @@ export default async function AdminPage({
   params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
-  const supabase = await createClient();
-  const { data: { user } } = await supabase.auth.getUser();
   const prefix = locale === "en" ? "" : `/${locale}`;
-
-  if (!user || user.email !== process.env.ADMIN_EMAIL) {
-    redirect(`${prefix}/`);
-  }
 
   const admin = createAdminClient();
 
