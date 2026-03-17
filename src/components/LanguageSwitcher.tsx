@@ -1,7 +1,7 @@
 "use client";
 
 import { useLocale } from "next-intl";
-import { useRouter, usePathname } from "next/navigation";
+import { useRouter, usePathname } from "@/i18n/navigation";
 import { useState, useRef, useEffect } from "react";
 import { Globe, ChevronDown } from "lucide-react";
 
@@ -33,22 +33,7 @@ export default function LanguageSwitcher({ variant = "light" }: { variant?: "lig
 
   function switchLocale(newLocale: string) {
     setOpen(false);
-    // Remove current locale prefix from pathname
-    const locales = ["en", "da", "sv", "no"];
-    let newPath = pathname;
-    for (const l of locales) {
-      if (pathname.startsWith(`/${l}/`)) {
-        newPath = pathname.replace(`/${l}/`, "/");
-        break;
-      } else if (pathname === `/${l}`) {
-        newPath = "/";
-        break;
-      }
-    }
-    // Add new locale prefix (en is default, no prefix needed)
-    const finalPath = newLocale === "en" ? newPath : `/${newLocale}${newPath}`;
-    router.push(finalPath);
-    router.refresh();
+    router.replace(pathname, { locale: newLocale });
   }
 
   const isDark = variant === "dark";
