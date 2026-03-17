@@ -26,8 +26,13 @@ function getLocalePrefix(pathname: string): string | undefined {
 export async function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
-  // Skip for API routes and static files
-  if (pathname.startsWith("/api/") || pathname.startsWith("/_next/") || pathname.includes(".")) {
+  // Skip for API routes, static files, and non-locale admin routes
+  if (
+    pathname.startsWith("/api/") ||
+    pathname.startsWith("/_next/") ||
+    pathname === "/admin/login" ||
+    pathname.includes(".")
+  ) {
     return NextResponse.next();
   }
 
