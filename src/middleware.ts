@@ -72,6 +72,7 @@ export async function middleware(request: NextRequest) {
     strippedPath.startsWith("/auth/signup");
 
   const isDashboard = strippedPath.startsWith("/dashboard");
+  const isAdmin = strippedPath.startsWith("/admin");
 
   if (isDashboard && !user) {
     const url = request.nextUrl.clone();
@@ -83,6 +84,16 @@ export async function middleware(request: NextRequest) {
     const url = request.nextUrl.clone();
     url.pathname = localePrefix ? `/${localePrefix}/dashboard` : "/dashboard";
     return NextResponse.redirect(url);
+  }
+
+  // Admin: kun tilladt for ADMIN_EMAIL
+  if (isAdmin) {
+    const adminEmail = process.env.ADMIN_EMAIL;
+    if (!user || user.email !== adminEmail) {
+      const url = request.nextUrl.clone();
+      url.pathname = "/";
+      return NextResponse.redirect(url);
+    }
   }
 
   // Merge supabase cookies into intl response
