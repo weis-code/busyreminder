@@ -1,11 +1,41 @@
 import { createServerClient } from "@supabase/ssr";
 import { NextResponse, type NextRequest } from "next/server";
+import createIntlMiddleware from "next-intl/middleware";
+import { routing } from "./i18n/routing";
+
+const intlMiddleware = createIntlMiddleware(routing);
+
+const locales = ["en", "da", "sv", "no"];
+
+function getStrippedPath(pathname: string): string {
+  for (const locale of locales) {
+    if (pathname.startsWith(`/${locale}/`) || pathname === `/${locale}`) {
+      return pathname.replace(`/${locale}`, "") || "/";
+    }
+  }
+  return pathname;
+}
+
+function getLocalePrefix(pathname: string): string | undefined {
+  return locales.find(
+    (l) => pathname.startsWith(`/${l}/`) || pathname === `/${l}`
+  );
+}
 
 export async function middleware(request: NextRequest) {
-  // Skip middleware if Supabase is not configured yet
+  const { pathname } = request.nextUrl;
+
+  // Skip for API routes and static files
+  if (pathname.startsWith("/api/") || pathname.startsWith("/_next/") || pathname.includes(".")) {
+    return NextResponse.next();
+  }
+
+  // Run intl middleware
+  const intlResponse = intlMiddleware(request);
+
   const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
   if (!supabaseUrl || supabaseUrl === "your_supabase_url") {
-    return NextResponse.next({ request });
+    return intlResponse || NextResponse.next({ request });
   }
 
   let supabaseResponse = NextResponse.next({ request });
@@ -32,26 +62,35 @@ export async function middleware(request: NextRequest) {
     }
   );
 
-  const {
-    data: { user },
-  } = await supabase.auth.getUser();
+  const { data: { user } } = await supabase.auth.getUser();
+
+  const strippedPath = getStrippedPath(pathname);
+  const localePrefix = getLocalePrefix(pathname);
 
   const isAuthPage =
-    request.nextUrl.pathname.startsWith("/auth/login") ||
-    request.nextUrl.pathname.startsWith("/auth/signup");
+    strippedPath.startsWith("/auth/login") ||
+    strippedPath.startsWith("/auth/signup");
 
-  const isDashboard = request.nextUrl.pathname.startsWith("/dashboard");
+  const isDashboard = strippedPath.startsWith("/dashboard");
 
   if (isDashboard && !user) {
     const url = request.nextUrl.clone();
-    url.pathname = "/auth/login";
+    url.pathname = localePrefix ? `/${localePrefix}/auth/login` : "/auth/login";
     return NextResponse.redirect(url);
   }
 
   if (isAuthPage && user) {
     const url = request.nextUrl.clone();
-    url.pathname = "/dashboard";
+    url.pathname = localePrefix ? `/${localePrefix}/dashboard` : "/dashboard";
     return NextResponse.redirect(url);
+  }
+
+  // Merge supabase cookies into intl response
+  if (intlResponse) {
+    supabaseResponse.cookies.getAll().forEach((cookie) => {
+      intlResponse.cookies.set(cookie.name, cookie.value, cookie);
+    });
+    return intlResponse;
   }
 
   return supabaseResponse;
@@ -59,6 +98,6 @@ export async function middleware(request: NextRequest) {
 
 export const config = {
   matcher: [
-    "/((?!_next/static|_next/image|favicon.ico|.*\\.(?:svg|png|jpg|jpeg|gif|webp)$).*)",
+    "/((?!_next/static|_next/image|favicon.ico|logo.png|.*\\.(?:svg|png|jpg|jpeg|gif|webp)$).*)",
   ],
 };

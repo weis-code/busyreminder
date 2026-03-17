@@ -1,0 +1,252 @@
+{
+  "nav": {
+    "features": "Funksjoner",
+    "how_it_works": "Slik fungerer det",
+    "pricing": "Priser",
+    "faq": "FAQ",
+    "start_here": "START HER",
+    "login": "Logg inn"
+  },
+  "hero": {
+    "badge": "Automatiser anmeldelsesforespørslene dine",
+    "title_line1": "GET MORE REVIEWS.",
+    "title_line2": "AUTOMATICALLY.",
+    "subtitle": "Automatiske anmeldelsesforespørsler som øker tillit, synlighet og konverteringer.",
+    "cta_primary": "Kom i gang",
+    "cta_secondary": "Se hvordan det fungerer"
+  },
+  "features": {
+    "title": "Alt du trenger for flere anmeldelser",
+    "subtitle": "En enkel plattform som gjør det tunge arbeidet for deg — helt automatisk.",
+    "items": {
+      "reminders_title": "Automatiske e-postpåminnelser",
+      "reminders_desc": "Send opptil 3 automatiske oppfølgings-e-poster per kunde til de legger igjen en anmeldelse.",
+      "upload_title": "Rask kundeoppplasting",
+      "upload_desc": "Last opp kundelisten din som en CSV-fil med navn og e-post — gjort på sekunder.",
+      "integrations_title": "Google & Trustpilot",
+      "integrations_desc": "Lenk direkte til din Google-, Trustpilot- eller tilpassede anmeldelsesside.",
+      "dashboard_title": "Full oversikt i dashboard",
+      "dashboard_desc": "Se nøyaktig hvor mange forespørsler som er sendt, venter og fullført.",
+      "setup_title": "Enkel oppsett",
+      "setup_desc": "Ingen tekniske integrasjoner nødvendig. Du kan være i gang på under 5 minutter.",
+      "plans_title": "Fleksible planer",
+      "plans_desc": "Velg planen som passer for bedriften din — skaler opp når du vokser."
+    }
+  },
+  "how_it_works": {
+    "title": "Slik fungerer det",
+    "subtitle": "Tre enkle trinn for å få flere anmeldelser automatisk.",
+    "step1_title": "Last opp kundene dine",
+    "step1_desc": "Last opp en CSV-fil med kundenes navn og e-post, eller legg dem til manuelt én om gangen.",
+    "step2_title": "BusyReminder sender påminnelser",
+    "step2_desc": "Vi sender automatisk opptil 3 vennlige e-poster til hver kunde og ber om en anmeldelse.",
+    "step3_title": "Få flere anmeldelser automatisk",
+    "step3_desc": "Lene deg tilbake og se anmeldelsene komme inn mens du fokuserer på bedriften din."
+  },
+  "pricing": {
+    "title": "Enkel, transparent prising",
+    "subtitle": "Ingen oppstartsavgift. Ingen skjulte kostnader. Avslutt når som helst.",
+    "monthly": "/ mnd",
+    "popular": "Mest populær",
+    "cta": "Kom i gang",
+    "basic": {
+      "name": "Basic",
+      "price": "149",
+      "currency": "DKK",
+      "features": [
+        "100 anmeldelsesforespørsler per måned",
+        "Opptil 3 e-poster per kunde",
+        "Dashboard med full oversikt",
+        "Google + Trustpilot integrasjon",
+        "E-poststøtte"
+      ]
+    },
+    "pro": {
+      "name": "Pro",
+      "price": "449",
+      "currency": "DKK",
+      "features": [
+        "500 anmeldelsesforespørsler per måned",
+        "Alt i Basic",
+        "Prioritert støtte",
+        "Tilpasset avsendernavn",
+        "Avansert statistikk"
+      ]
+    }
+  },
+  "faq": {
+    "title": "Ofte stilte spørsmål",
+    "items": [
+      {
+        "q": "Hvor raskt kan jeg komme i gang?",
+        "a": "På under 5 minutter. Registrer deg, last opp kundene dine, sett inn anmeldelseslenken din — og BusyReminder tar seg av resten."
+      },
+      {
+        "q": "Hvilke plattformer støttes?",
+        "a": "Google, Trustpilot eller en valgfri tilpasset lenke du oppgir."
+      },
+      {
+        "q": "Kan jeg avslutte når som helst?",
+        "a": "Ja, absolutt. Du kan avslutte eller endre planen din når som helst fra dashboardet ditt."
+      },
+      {
+        "q": "Hva skjer når jeg når den månedlige grensen?",
+        "a": "Vi slutter å sende e-poster og varsler deg. Du kan oppgradere til Pro når som helst."
+      },
+      {
+        "q": "På hvilket språk sendes e-postene?",
+        "a": "E-poster sendes på det språket du velger i kontoinnstillingene dine."
+      }
+    ]
+  },
+  "footer": {
+    "tagline": "Automatiske anmeldelsesforespørsler for bedrifter.",
+    "product": "Produkt",
+    "features": "Funksjoner",
+    "pricing": "Priser",
+    "login": "Logg inn",
+    "legal": "Juridisk",
+    "terms": "Vilkår",
+    "privacy": "Personvernpolicy",
+    "copyright": "Alle rettigheter forbeholdt."
+  },
+  "auth": {
+    "login": {
+      "title": "Velkommen tilbake",
+      "subtitle": "Logg inn på BusyReminder-kontoen din",
+      "email": "E-post",
+      "password": "Passord",
+      "forgot_password": "Glemt passord?",
+      "submit": "Logg inn",
+      "loading": "Logger inn...",
+      "no_account": "Har du ikke en konto?",
+      "signup_link": "Opprett konto gratis",
+      "error": "Feil e-post eller passord"
+    },
+    "signup": {
+      "title": "Opprett kontoen din",
+      "subtitle_basic": "Start med Basic (149 DKK/mnd)",
+      "subtitle_pro": "Start med Pro (449 DKK/mnd)",
+      "company_name": "Bedriftsnavn",
+      "company_placeholder": "Din Bedrift AS",
+      "email": "E-post",
+      "password": "Passord",
+      "password_placeholder": "Min. 8 tegn",
+      "submit": "Opprett konto & velg plan",
+      "loading": "Oppretter konto...",
+      "have_account": "Har du allerede en konto?",
+      "login_link": "Logg inn her",
+      "terms_text": "Ved å opprette en konto godtar du våre",
+      "terms_link": "vilkår",
+      "and": "og",
+      "privacy_link": "personvernpolicy"
+    }
+  },
+  "dashboard": {
+    "nav": {
+      "dashboard": "Dashboard",
+      "customers": "Kunder",
+      "campaigns": "Kampanjer",
+      "settings": "Innstillinger",
+      "logout": "Logg ut"
+    },
+    "overview": {
+      "title": "Dashboard",
+      "usage": "Månedlig bruk",
+      "of": "av",
+      "requests_sent": "forespørsler sendt",
+      "active_customers": "Aktive kunder",
+      "pending_reminders": "Ventende påminnelser",
+      "add_customers": "Legg til kunder",
+      "plan_basic": "Basic-plan",
+      "plan_pro": "Pro-plan",
+      "upgrade_title": "Du har nådd den månedlige grensen",
+      "upgrade_desc": "Oppgrader til Pro for å sende 500 anmeldelsesforespørsler per måned.",
+      "upgrade_btn": "Oppgrader til Pro"
+    },
+    "customers": {
+      "title": "Kunder",
+      "add_single": "Legg til kunde",
+      "upload_csv": "Last opp CSV",
+      "name": "Navn",
+      "email": "E-post",
+      "status": "Status",
+      "sent_count": "Sendt",
+      "last_sent": "Sist sendt",
+      "actions": "Handlinger",
+      "no_customers": "Ingen kunder ennå",
+      "no_customers_desc": "Legg til din første kunde for å komme i gang.",
+      "status_pending": "Venter",
+      "status_sent_1": "1. sendt",
+      "status_sent_2": "2. sendt",
+      "status_sent_3": "3. sendt",
+      "status_done": "Ferdig",
+      "status_unsubscribed": "Avmeldt",
+      "add_title": "Legg til kunde",
+      "add_name": "Navn",
+      "add_email": "E-post",
+      "add_submit": "Legg til kunde",
+      "add_loading": "Legger til...",
+      "csv_title": "Last opp CSV",
+      "csv_desc": "Filen må ha to kolonner: navn og e-post",
+      "csv_template": "Last ned mal",
+      "csv_upload": "Velg fil",
+      "csv_submit": "Last opp",
+      "csv_loading": "Laster opp...",
+      "send_first_email": "Send første e-post",
+      "delete": "Slett",
+      "confirm_delete": "Er du sikker på at du vil slette denne kunden?",
+      "search": "Søk kunder...",
+      "filter_all": "Alle",
+      "filter_pending": "Venter",
+      "filter_sent": "Sendt",
+      "filter_done": "Ferdig"
+    },
+    "campaigns": {
+      "title": "Kampanjer",
+      "review_url": "Anmeldelseslenke",
+      "review_url_placeholder": "https://g.page/din-bedrift/review",
+      "url_type": "Plattform",
+      "url_google": "Google",
+      "url_trustpilot": "Trustpilot",
+      "url_custom": "Tilpasset lenke",
+      "reminder_count": "Antall påminnelser",
+      "interval_days": "Dager mellom påminnelser",
+      "save": "Lagre innstillinger",
+      "saving": "Lagrer...",
+      "preview_title": "E-postforhåndsvisning",
+      "preview_subject": "Emne",
+      "no_campaign": "Ingen kampanje konfigurert ennå.",
+      "no_campaign_desc": "Sett inn anmeldelseslenken din for å komme i gang."
+    },
+    "settings": {
+      "title": "Innstillinger",
+      "company_name": "Bedriftsnavn",
+      "sender_name": "Avsenderens visningsnavn",
+      "sender_name_desc": "Navn som vises som avsender i e-poster",
+      "language": "Kontospråk",
+      "language_desc": "Språk som brukes i e-poster sendt til kundene dine",
+      "email_language": "E-postspråk",
+      "save": "Lagre endringer",
+      "saving": "Lagrer...",
+      "subscription": "Abonnement",
+      "manage_subscription": "Administrer abonnement",
+      "manage_desc": "Bytt plan, betalingsmetode eller avslutt",
+      "open_portal": "Åpne betalingsportal",
+      "danger_zone": "Konto",
+      "logout": "Logg ut"
+    }
+  },
+  "email": {
+    "subject_first": "Kan du hjelpe oss med en rask anmeldelse?",
+    "subject_followup": "Påminnelse: Din mening er viktig for oss",
+    "greeting": "Hei {name},",
+    "followup_intro": "Vi ville bare følge opp på vår forrige melding.",
+    "body": "Takk for at du valgte {company}. Vi håper du er fornøyd med opplevelsen din!",
+    "body2": "Det ville bety utrolig mye for oss om du kunne ta 2 minutter og legge igjen en anmeldelse. Det hjelper oss med å forbedre tjenesten vår og hjelper andre med å ta en god beslutning.",
+    "cta": "Skriv en anmeldelse →",
+    "closing": "Med vennlig hilsen,",
+    "footer": "Du mottar denne e-posten fordi du har vært kunde hos {company}.",
+    "unsubscribe": "Avmeld fremtidige e-poster"
+  }
+}

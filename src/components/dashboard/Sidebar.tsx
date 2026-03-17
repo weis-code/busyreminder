@@ -3,56 +3,51 @@
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname, useRouter } from "next/navigation";
-import {
-  LayoutDashboard,
-  Users,
-  Megaphone,
-  Settings,
-  LogOut,
-  Menu,
-  X,
-} from "lucide-react";
+import { LayoutDashboard, Users, Megaphone, Settings, LogOut, Menu, X } from "lucide-react";
 import { useState } from "react";
 import { createClient } from "@/lib/supabase/client";
 import type { User } from "@supabase/supabase-js";
+import { useTranslations, useLocale } from "next-intl";
+import LanguageSwitcher from "@/components/LanguageSwitcher";
 
 interface SidebarProps {
   user: User;
-  profile: {
-    company_name: string;
-    plan: string;
-  } | null;
+  profile: { company_name: string; plan: string } | null;
 }
 
-const navItems = [
-  { href: "/dashboard", label: "Dashboard", icon: LayoutDashboard },
-  { href: "/dashboard/customers", label: "Kunder", icon: Users },
-  { href: "/dashboard/campaigns", label: "Kampagner", icon: Megaphone },
-  { href: "/dashboard/settings", label: "Indstillinger", icon: Settings },
-];
-
 export default function Sidebar({ user, profile }: SidebarProps) {
+  const t = useTranslations("dashboard.nav");
+  const locale = useLocale();
   const pathname = usePathname();
   const router = useRouter();
   const [mobileOpen, setMobileOpen] = useState(false);
 
+  const prefix = locale === "en" ? "" : `/${locale}`;
+
+  const navItems = [
+    { href: `${prefix}/dashboard`, label: t("dashboard"), icon: LayoutDashboard },
+    { href: `${prefix}/dashboard/customers`, label: t("customers"), icon: Users },
+    { href: `${prefix}/dashboard/campaigns`, label: t("campaigns"), icon: Megaphone },
+    { href: `${prefix}/dashboard/settings`, label: t("settings"), icon: Settings },
+  ];
+
   async function handleLogout() {
     const supabase = createClient();
     await supabase.auth.signOut();
-    router.push("/auth/login");
+    router.push(`${prefix}/auth/login`);
   }
+
+  const strippedPathname = locale !== "en" ? pathname.replace(`/${locale}`, "") : pathname;
 
   const SidebarContent = () => (
     <div className="flex flex-col h-full">
-      {/* Logo */}
       <div className="p-6 border-b border-gray-100">
-        <Link href="/dashboard" className="flex items-center gap-2">
+        <Link href={`${prefix}/dashboard`} className="flex items-center gap-2">
           <Image src="/logo.png" alt="BusyReminder" width={32} height={32} />
           <span className="text-lg font-bold text-gray-900">BusyReminder</span>
         </Link>
       </div>
 
-      {/* Company info */}
       <div className="p-4 mx-3 mt-4 bg-blue-50 rounded-xl">
         <p className="text-xs text-gray-500 mb-0.5">Virksomhed</p>
         <p className="text-sm font-semibold text-gray-900 truncate">
@@ -63,22 +58,20 @@ export default function Sidebar({ user, profile }: SidebarProps) {
         </span>
       </div>
 
-      {/* Navigation */}
       <nav className="flex-1 p-3 mt-2">
         <ul className="space-y-1">
           {navItems.map((item) => {
+            const itemStripped = locale !== "en" ? item.href.replace(`/${locale}`, "") : item.href;
             const isActive =
-              pathname === item.href ||
-              (item.href !== "/dashboard" && pathname.startsWith(item.href));
+              strippedPathname === itemStripped ||
+              (itemStripped !== "/dashboard" && strippedPathname.startsWith(itemStripped));
             return (
               <li key={item.href}>
                 <Link
                   href={item.href}
                   onClick={() => setMobileOpen(false)}
                   className={`flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium transition-all ${
-                    isActive
-                      ? "bg-[#1E90FF] text-white shadow-md shadow-blue-200"
-                      : "text-gray-600 hover:bg-gray-100 hover:text-gray-900"
+                    isActive ? "bg-[#1E90FF] text-white shadow-md shadow-blue-200" : "text-gray-600 hover:bg-gray-100 hover:text-gray-900"
                   }`}
                 >
                   <item.icon className="w-5 h-5 flex-shrink-0" />
@@ -90,14 +83,17 @@ export default function Sidebar({ user, profile }: SidebarProps) {
         </ul>
       </nav>
 
-      {/* Logout */}
+      <div className="px-3 pb-2">
+        <LanguageSwitcher variant="light" />
+      </div>
+
       <div className="p-3 border-t border-gray-100">
         <button
           onClick={handleLogout}
           className="w-full flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium text-gray-600 hover:bg-red-50 hover:text-red-600 transition-all"
         >
           <LogOut className="w-5 h-5" />
-          Log ud
+          {t("logout")}
         </button>
       </div>
     </div>

@@ -1,0 +1,252 @@
+{
+  "nav": {
+    "features": "Funktioner",
+    "how_it_works": "Hur det fungerar",
+    "pricing": "Priser",
+    "faq": "FAQ",
+    "start_here": "BÖRJA HÄR",
+    "login": "Logga in"
+  },
+  "hero": {
+    "badge": "Automatisera dina recensionsförfrågningar",
+    "title_line1": "GET MORE REVIEWS.",
+    "title_line2": "AUTOMATICALLY.",
+    "subtitle": "Automatiska recensionsförfrågningar som ökar förtroende, synlighet och konverteringar.",
+    "cta_primary": "Kom igång",
+    "cta_secondary": "Se hur det fungerar"
+  },
+  "features": {
+    "title": "Allt du behöver för fler recensioner",
+    "subtitle": "En enkel plattform som gör det tunga arbetet åt dig — helt automatiskt.",
+    "items": {
+      "reminders_title": "Automatiska e-postpåminnelser",
+      "reminders_desc": "Skicka upp till 3 automatiska uppföljningsmejl per kund tills de lämnar en recension.",
+      "upload_title": "Snabb kunduppladdning",
+      "upload_desc": "Ladda upp din kundlista som en CSV-fil med namn och e-post — klart på sekunder.",
+      "integrations_title": "Google & Trustpilot",
+      "integrations_desc": "Länka direkt till din Google-, Trustpilot- eller anpassade recensionssida.",
+      "dashboard_title": "Full överblick i dashboard",
+      "dashboard_desc": "Se exakt hur många förfrågningar som är skickade, väntande och slutförda.",
+      "setup_title": "Enkel installation",
+      "setup_desc": "Inga tekniska integrationer behövs. Du kan vara igång på under 5 minuter.",
+      "plans_title": "Flexibla planer",
+      "plans_desc": "Välj den plan som passar ditt företag — skala upp när du växer."
+    }
+  },
+  "how_it_works": {
+    "title": "Hur det fungerar",
+    "subtitle": "Tre enkla steg för att få fler recensioner automatiskt.",
+    "step1_title": "Ladda upp dina kunder",
+    "step1_desc": "Ladda upp en CSV-fil med dina kunders namn och e-post, eller lägg till dem manuellt en i taget.",
+    "step2_title": "BusyReminder skickar påminnelser",
+    "step2_desc": "Vi skickar automatiskt upp till 3 vänliga mejl till varje kund och ber om en recension.",
+    "step3_title": "Få fler recensioner automatiskt",
+    "step3_desc": "Luta dig tillbaka och se recensionerna komma in medan du fokuserar på ditt företag."
+  },
+  "pricing": {
+    "title": "Enkel, transparent prissättning",
+    "subtitle": "Ingen startavgift. Inga dolda kostnader. Avsluta när som helst.",
+    "monthly": "/ mån",
+    "popular": "Mest populär",
+    "cta": "Kom igång",
+    "basic": {
+      "name": "Basic",
+      "price": "149",
+      "currency": "DKK",
+      "features": [
+        "100 recensionsförfrågningar per månad",
+        "Upp till 3 mejl per kund",
+        "Dashboard med full överblick",
+        "Google + Trustpilot integration",
+        "E-postsupport"
+      ]
+    },
+    "pro": {
+      "name": "Pro",
+      "price": "449",
+      "currency": "DKK",
+      "features": [
+        "500 recensionsförfrågningar per månad",
+        "Allt i Basic",
+        "Prioriterad support",
+        "Anpassat avsändarnamn",
+        "Avancerad statistik"
+      ]
+    }
+  },
+  "faq": {
+    "title": "Vanliga frågor",
+    "items": [
+      {
+        "q": "Hur snabbt kan jag komma igång?",
+        "a": "På under 5 minuter. Registrera dig, ladda upp dina kunder, ange din recensionslänk — och BusyReminder sköter resten."
+      },
+      {
+        "q": "Vilka plattformar stöds?",
+        "a": "Google, Trustpilot eller valfri anpassad länk du anger."
+      },
+      {
+        "q": "Kan jag avsluta när som helst?",
+        "a": "Ja, absolut. Du kan avsluta eller ändra din plan när som helst från din dashboard."
+      },
+      {
+        "q": "Vad händer när jag når min månadsgräns?",
+        "a": "Vi slutar skicka mejl och meddelar dig. Du kan uppgradera till Pro när som helst."
+      },
+      {
+        "q": "På vilket språk skickas mejlen?",
+        "a": "Mejl skickas på det språk du väljer i dina kontoinställningar."
+      }
+    ]
+  },
+  "footer": {
+    "tagline": "Automatiska recensionsförfrågningar för företag.",
+    "product": "Produkt",
+    "features": "Funktioner",
+    "pricing": "Priser",
+    "login": "Logga in",
+    "legal": "Juridiskt",
+    "terms": "Villkor",
+    "privacy": "Integritetspolicy",
+    "copyright": "Alla rättigheter förbehållna."
+  },
+  "auth": {
+    "login": {
+      "title": "Välkommen tillbaka",
+      "subtitle": "Logga in på ditt BusyReminder-konto",
+      "email": "E-post",
+      "password": "Lösenord",
+      "forgot_password": "Glömt lösenord?",
+      "submit": "Logga in",
+      "loading": "Loggar in...",
+      "no_account": "Har du inget konto?",
+      "signup_link": "Skapa konto gratis",
+      "error": "Fel e-post eller lösenord"
+    },
+    "signup": {
+      "title": "Skapa ditt konto",
+      "subtitle_basic": "Börja med Basic (149 DKK/mån)",
+      "subtitle_pro": "Börja med Pro (449 DKK/mån)",
+      "company_name": "Företagsnamn",
+      "company_placeholder": "Ditt Företag AB",
+      "email": "E-post",
+      "password": "Lösenord",
+      "password_placeholder": "Min. 8 tecken",
+      "submit": "Skapa konto & välj plan",
+      "loading": "Skapar konto...",
+      "have_account": "Har du redan ett konto?",
+      "login_link": "Logga in här",
+      "terms_text": "Genom att skapa ett konto accepterar du våra",
+      "terms_link": "villkor",
+      "and": "och",
+      "privacy_link": "integritetspolicy"
+    }
+  },
+  "dashboard": {
+    "nav": {
+      "dashboard": "Dashboard",
+      "customers": "Kunder",
+      "campaigns": "Kampanjer",
+      "settings": "Inställningar",
+      "logout": "Logga ut"
+    },
+    "overview": {
+      "title": "Dashboard",
+      "usage": "Månadsanvändning",
+      "of": "av",
+      "requests_sent": "förfrågningar skickade",
+      "active_customers": "Aktiva kunder",
+      "pending_reminders": "Väntande påminnelser",
+      "add_customers": "Lägg till kunder",
+      "plan_basic": "Basic-plan",
+      "plan_pro": "Pro-plan",
+      "upgrade_title": "Du har nått din månadsgräns",
+      "upgrade_desc": "Uppgradera till Pro för att skicka 500 recensionsförfrågningar per månad.",
+      "upgrade_btn": "Uppgradera till Pro"
+    },
+    "customers": {
+      "title": "Kunder",
+      "add_single": "Lägg till kund",
+      "upload_csv": "Ladda upp CSV",
+      "name": "Namn",
+      "email": "E-post",
+      "status": "Status",
+      "sent_count": "Skickat",
+      "last_sent": "Senast skickat",
+      "actions": "Åtgärder",
+      "no_customers": "Inga kunder ännu",
+      "no_customers_desc": "Lägg till din första kund för att komma igång.",
+      "status_pending": "Väntar",
+      "status_sent_1": "1:a skickat",
+      "status_sent_2": "2:a skickat",
+      "status_sent_3": "3:e skickat",
+      "status_done": "Klart",
+      "status_unsubscribed": "Avregistrerad",
+      "add_title": "Lägg till kund",
+      "add_name": "Namn",
+      "add_email": "E-post",
+      "add_submit": "Lägg till kund",
+      "add_loading": "Lägger till...",
+      "csv_title": "Ladda upp CSV",
+      "csv_desc": "Filen måste ha två kolumner: namn och e-post",
+      "csv_template": "Ladda ner mall",
+      "csv_upload": "Välj fil",
+      "csv_submit": "Ladda upp",
+      "csv_loading": "Laddar upp...",
+      "send_first_email": "Skicka första mejlet",
+      "delete": "Ta bort",
+      "confirm_delete": "Är du säker på att du vill ta bort den här kunden?",
+      "search": "Sök kunder...",
+      "filter_all": "Alla",
+      "filter_pending": "Väntar",
+      "filter_sent": "Skickat",
+      "filter_done": "Klart"
+    },
+    "campaigns": {
+      "title": "Kampanjer",
+      "review_url": "Recensionslänk",
+      "review_url_placeholder": "https://g.page/ditt-foretag/review",
+      "url_type": "Plattform",
+      "url_google": "Google",
+      "url_trustpilot": "Trustpilot",
+      "url_custom": "Anpassad länk",
+      "reminder_count": "Antal påminnelser",
+      "interval_days": "Dagar mellan påminnelser",
+      "save": "Spara inställningar",
+      "saving": "Sparar...",
+      "preview_title": "E-postförhandsvisning",
+      "preview_subject": "Ämne",
+      "no_campaign": "Ingen kampanj konfigurerad ännu.",
+      "no_campaign_desc": "Ange din recensionslänk för att komma igång."
+    },
+    "settings": {
+      "title": "Inställningar",
+      "company_name": "Företagsnamn",
+      "sender_name": "Avsändarens visningsnamn",
+      "sender_name_desc": "Namn som visas som avsändare i mejl",
+      "language": "Kontospråk",
+      "language_desc": "Språk som används i mejl skickade till dina kunder",
+      "email_language": "Mejlspråk",
+      "save": "Spara ändringar",
+      "saving": "Sparar...",
+      "subscription": "Prenumeration",
+      "manage_subscription": "Hantera prenumeration",
+      "manage_desc": "Byt plan, betalningsmetod eller avsluta",
+      "open_portal": "Öppna betalningsportal",
+      "danger_zone": "Konto",
+      "logout": "Logga ut"
+    }
+  },
+  "email": {
+    "subject_first": "Kan du hjälpa oss med en snabb recension?",
+    "subject_followup": "Påminnelse: Din åsikt är viktig för oss",
+    "greeting": "Hej {name},",
+    "followup_intro": "Vi ville bara följa upp på vårt tidigare meddelande.",
+    "body": "Tack för att du valde {company}. Vi hoppas att du är nöjd med din upplevelse!",
+    "body2": "Det skulle betyda otroligt mycket för oss om du kunde ta 2 minuter och lämna en recension. Det hjälper oss att förbättra vår service och hjälper andra att fatta ett bra beslut.",
+    "cta": "Skriv en recension →",
+    "closing": "Med vänliga hälsningar,",
+    "footer": "Du får det här mejlet eftersom du har varit kund hos {company}.",
+    "unsubscribe": "Avregistrera framtida mejl"
+  }
+}

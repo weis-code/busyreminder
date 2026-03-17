@@ -1,0 +1,252 @@
+{
+  "nav": {
+    "features": "Features",
+    "how_it_works": "How it works",
+    "pricing": "Pricing",
+    "faq": "FAQ",
+    "start_here": "START HERE",
+    "login": "Log in"
+  },
+  "hero": {
+    "badge": "Automate your review requests",
+    "title_line1": "GET MORE REVIEWS.",
+    "title_line2": "AUTOMATICALLY.",
+    "subtitle": "Automatic review requests that increase trust, visibility, and conversions.",
+    "cta_primary": "Get started",
+    "cta_secondary": "See how it works"
+  },
+  "features": {
+    "title": "Everything you need for more reviews",
+    "subtitle": "A simple platform that does the hard work for you — fully automatically.",
+    "items": {
+      "reminders_title": "Automatic email reminders",
+      "reminders_desc": "Send up to 3 automatic follow-up emails per customer until they leave a review.",
+      "upload_title": "Quick customer upload",
+      "upload_desc": "Upload your customer list as a CSV file with just name and email — done in seconds.",
+      "integrations_title": "Google & Trustpilot",
+      "integrations_desc": "Link directly to your Google, Trustpilot, or custom review page.",
+      "dashboard_title": "Full overview dashboard",
+      "dashboard_desc": "See exactly how many requests are sent, pending, and completed.",
+      "setup_title": "Simple setup",
+      "setup_desc": "No technical integrations needed. You can be up and running in under 5 minutes.",
+      "plans_title": "Flexible plans",
+      "plans_desc": "Choose the plan that fits your business — scale up as you grow."
+    }
+  },
+  "how_it_works": {
+    "title": "How it works",
+    "subtitle": "Three simple steps to get more reviews automatically.",
+    "step1_title": "Upload your customers",
+    "step1_desc": "Upload a CSV file with your customers' name and email, or add them manually one by one.",
+    "step2_title": "BusyReminder sends reminders",
+    "step2_desc": "We automatically send up to 3 friendly emails to each customer asking for a review.",
+    "step3_title": "Get more reviews automatically",
+    "step3_desc": "Sit back and watch the reviews come in while you focus on your business."
+  },
+  "pricing": {
+    "title": "Simple, transparent pricing",
+    "subtitle": "No setup fees. No hidden costs. Cancel anytime.",
+    "monthly": "/ month",
+    "popular": "Most popular",
+    "cta": "Get started",
+    "basic": {
+      "name": "Basic",
+      "price": "149",
+      "currency": "DKK",
+      "features": [
+        "100 review requests per month",
+        "Up to 3 emails per customer",
+        "Dashboard with full overview",
+        "Google + Trustpilot integration",
+        "Email support"
+      ]
+    },
+    "pro": {
+      "name": "Pro",
+      "price": "449",
+      "currency": "DKK",
+      "features": [
+        "500 review requests per month",
+        "Everything in Basic",
+        "Priority support",
+        "Custom email sender name",
+        "Advanced statistics"
+      ]
+    }
+  },
+  "faq": {
+    "title": "Frequently asked questions",
+    "items": [
+      {
+        "q": "How quickly can I get started?",
+        "a": "In less than 5 minutes. Sign up, upload your customers, set your review link — and BusyReminder handles the rest."
+      },
+      {
+        "q": "What platforms does it support?",
+        "a": "Google, Trustpilot, or any custom link you provide."
+      },
+      {
+        "q": "Can I cancel anytime?",
+        "a": "Yes, absolutely. You can cancel or change your plan at any time from your dashboard."
+      },
+      {
+        "q": "What happens when I reach my monthly limit?",
+        "a": "We stop sending emails and notify you. You can upgrade to Pro at any time."
+      },
+      {
+        "q": "What language are the emails sent in?",
+        "a": "Emails are sent in the language you choose in your account settings."
+      }
+    ]
+  },
+  "footer": {
+    "tagline": "Automatic review requests for businesses.",
+    "product": "Product",
+    "features": "Features",
+    "pricing": "Pricing",
+    "login": "Log in",
+    "legal": "Legal",
+    "terms": "Terms",
+    "privacy": "Privacy policy",
+    "copyright": "All rights reserved."
+  },
+  "auth": {
+    "login": {
+      "title": "Welcome back",
+      "subtitle": "Log in to your BusyReminder account",
+      "email": "Email",
+      "password": "Password",
+      "forgot_password": "Forgot password?",
+      "submit": "Log in",
+      "loading": "Logging in...",
+      "no_account": "Don't have an account?",
+      "signup_link": "Create account for free",
+      "error": "Incorrect email or password"
+    },
+    "signup": {
+      "title": "Create your account",
+      "subtitle_basic": "Start with Basic (149 DKK/month)",
+      "subtitle_pro": "Start with Pro (449 DKK/month)",
+      "company_name": "Company name",
+      "company_placeholder": "Your Company Ltd",
+      "email": "Email",
+      "password": "Password",
+      "password_placeholder": "Min. 8 characters",
+      "submit": "Create account & choose plan",
+      "loading": "Creating account...",
+      "have_account": "Already have an account?",
+      "login_link": "Log in here",
+      "terms_text": "By creating an account you accept our",
+      "terms_link": "terms",
+      "and": "and",
+      "privacy_link": "privacy policy"
+    }
+  },
+  "dashboard": {
+    "nav": {
+      "dashboard": "Dashboard",
+      "customers": "Customers",
+      "campaigns": "Campaigns",
+      "settings": "Settings",
+      "logout": "Log out"
+    },
+    "overview": {
+      "title": "Dashboard",
+      "usage": "Monthly usage",
+      "of": "of",
+      "requests_sent": "requests sent",
+      "active_customers": "Active customers",
+      "pending_reminders": "Pending reminders",
+      "add_customers": "Add customers",
+      "plan_basic": "Basic plan",
+      "plan_pro": "Pro plan",
+      "upgrade_title": "You've reached your monthly limit",
+      "upgrade_desc": "Upgrade to Pro to send 500 review requests per month.",
+      "upgrade_btn": "Upgrade to Pro"
+    },
+    "customers": {
+      "title": "Customers",
+      "add_single": "Add customer",
+      "upload_csv": "Upload CSV",
+      "name": "Name",
+      "email": "Email",
+      "status": "Status",
+      "sent_count": "Sent",
+      "last_sent": "Last sent",
+      "actions": "Actions",
+      "no_customers": "No customers yet",
+      "no_customers_desc": "Add your first customer to get started.",
+      "status_pending": "Pending",
+      "status_sent_1": "1st sent",
+      "status_sent_2": "2nd sent",
+      "status_sent_3": "3rd sent",
+      "status_done": "Done",
+      "status_unsubscribed": "Unsubscribed",
+      "add_title": "Add customer",
+      "add_name": "Name",
+      "add_email": "Email",
+      "add_submit": "Add customer",
+      "add_loading": "Adding...",
+      "csv_title": "Upload CSV",
+      "csv_desc": "The file must have two columns: name and email",
+      "csv_template": "Download template",
+      "csv_upload": "Choose file",
+      "csv_submit": "Upload",
+      "csv_loading": "Uploading...",
+      "send_first_email": "Send first email",
+      "delete": "Delete",
+      "confirm_delete": "Are you sure you want to delete this customer?",
+      "search": "Search customers...",
+      "filter_all": "All",
+      "filter_pending": "Pending",
+      "filter_sent": "Sent",
+      "filter_done": "Done"
+    },
+    "campaigns": {
+      "title": "Campaigns",
+      "review_url": "Review URL",
+      "review_url_placeholder": "https://g.page/your-business/review",
+      "url_type": "Platform",
+      "url_google": "Google",
+      "url_trustpilot": "Trustpilot",
+      "url_custom": "Custom link",
+      "reminder_count": "Number of reminders",
+      "interval_days": "Days between reminders",
+      "save": "Save settings",
+      "saving": "Saving...",
+      "preview_title": "Email preview",
+      "preview_subject": "Subject",
+      "no_campaign": "No campaign configured yet.",
+      "no_campaign_desc": "Set up your review link to get started."
+    },
+    "settings": {
+      "title": "Settings",
+      "company_name": "Company name",
+      "sender_name": "Sender display name",
+      "sender_name_desc": "Name shown as sender in emails",
+      "language": "Account language",
+      "language_desc": "Language used in emails sent to your customers",
+      "email_language": "Email language",
+      "save": "Save changes",
+      "saving": "Saving...",
+      "subscription": "Subscription",
+      "manage_subscription": "Manage subscription",
+      "manage_desc": "Change plan, payment method or cancel",
+      "open_portal": "Open billing portal",
+      "danger_zone": "Account",
+      "logout": "Log out"
+    }
+  },
+  "email": {
+    "subject_first": "Can you help us with a quick review?",
+    "subject_followup": "Reminder: Your opinion matters to us",
+    "greeting": "Hi {name},",
+    "followup_intro": "We wanted to follow up on our previous message.",
+    "body": "Thank you for choosing {company}. We hope you're satisfied with your experience!",
+    "body2": "It would mean a lot to us if you could take 2 minutes to leave a review. It helps us improve and helps others make a great decision.",
+    "cta": "Write a review →",
+    "closing": "Best regards,",
+    "footer": "You're receiving this email because you've been a customer of {company}.",
+    "unsubscribe": "Unsubscribe from future emails"
+  }
+}
